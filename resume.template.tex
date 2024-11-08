@@ -1,0 +1,253 @@
+% Based (but completely redesigned) on Resume in Latex Template by Sourabh Bajaj
+\documentclass[letterpaper, 10pt]{article}
+
+% font
+\usepackage[T1]{fontenc}
+\usepackage[sfdefault]{noto}
+% \usepackage[default]{raleway}
+
+\pdfgentounicode=1
+
+% packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{scrextend}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{fontawesome}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{pagecolor}
+\usepackage{ragged2e}
+
+\usepackage[left=1cm,right=1cm,top=1.25cm,bottom=1.25cm]{geometry}
+
+% custom
+
+% command macros
+\newcommand{\iconSpace}{\hspace{2px}}
+\newcommand{\bulletSpace}{\vspace{-4pt}}
+\newcommand{\hSpace}{\hspace{8px}}
+\newcommand{\secStartSpace}{\vspace{3pt}}
+\newcommand{\secEndSpace}{\vspace{5pt}}
+\newcommand{\spaceCollapse}{\vspace{-2pt}}
+
+% use the macro for work experience header
+% arg 1 = header title
+% arg 2 = position title (subtitle (in italics)
+% arg 3 = date
+\newcommand{\workHeader}[3]{
+\noindent \large{\textbf{\textcolor{TextColor}{#1}}} \hfill \normalsize{#3}\vspace{2pt}\\
+	\textit{#2}\vspace{-2pt}
+}
+
+% use the macro for work experience subheader
+\newcommand{\workSubHeader}[2]{
+    \noindent \textit{#1} \hfill \normalsize{#2}
+	\vspace{-2pt}
+}
+
+% use the macro for project header
+\usepackage{etoolbox} % Add this to the preamble
+
+\newcommand{\projectHeader}[3]{%
+    \noindent
+    \ifblank{#2}{%
+        \large\textbf{#1}%
+    }{%
+        \href{#2}{\large\textbf{#1}}%
+    }%
+    \hfill \normalsize#3 \vspace{2pt}%
+}
+
+% line spacing
+
+% colors
+% \definecolor{blue}{RGB}{14, 100, 237} % change the blue color if this one is not to your liking
+
+
+\definecolor{PageColor}{HTML}{1b2333}
+\definecolor{TextColor}{HTML}{c8d9da}
+\definecolor{HeaderColor}{HTML}{eff7f8}
+\definecolor{blue}{HTML}{eff7f8}
+\definecolor{white}{HTML}{f0fafb}
+
+\pagecolor{PageColor}
+\color{TextColor}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=HeaderColor,
+    filecolor=HeaderColor,
+    urlcolor=TextColor,
+}
+
+% indent space
+\titlespacing{\section}{0pt}{1px}{2ex}
+
+% Sections formatting
+\titleformat{\section}{
+\vspace{-2pt}\raggedright\Large
+}{}{0em}{}[\color{white}\titlerule \vspace{-5pt}]
+
+% bolder
+\newcommand{\boldlarger}[1]{{\large\textbf{\color{white}{#1}}}}
+% \newcommand{\boldlarger}[1]{{\textbf{\color{white}{#1}}}}
+\newcommand{\justlarge}[1]{{\large \textbf{#1}}}
+
+\begin{document}
+
+% ------------- header ------------- %
+\begin{center} 
+	{\Huge \textbf{BlackMyth}}\\
+	\vspace{1px}
+ \color{TextColor}
+	% "footnotes" (icon + link)
+	{
+		\color{white}
+            \faicon{phone} \iconSpace xxx-xxx-xxxx
+		\hfill
+		\href{mailto:xxxx@yahoo.com}{xxx@yahoo.com} \vspace{2pt} \iconSpace \faicon{envelope} 
+        }\\
+        {
+		\color{white}
+            \faicon{linkedin} \iconSpace \href{https://www.linkedin.com/in/Black-Myth/}{BlackMyth}
+		\hfill
+		\href{https://geekcoding101.com/}{Personal Blog} \vspace{2pt} \iconSpace \faicon{globe} 
+        }\\
+	{
+            \color{white}
+		\faicon{github} \iconSpace \href{https://github.com/geekcoding101}{GeekCoding101}
+            \hfill
+		\href{https://github.com/BlackMyth}{BlackMyth} \iconSpace \faicon{github} 
+		% \hSpace 
+		% \faicon{map-marker} \iconSpace
+		% Regina, SK
+	}
+\end{center}
+\spaceCollapse
+\spaceCollapse
+% ------------- end header ------------- %
+
+
+% ------------- work experience ------------- %
+\section{\texorpdfstring{\color{blue} \textbf{Work Experience}}{Work Experience}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\workHeader{Technologies LLC @ San Jose}{Principal Software Engineer}{Jan 2020 - Present}
+	\begin{itemize}
+            \item \justlarge{As tech lead} designed and developed ....
+                \bulletSpace
+            \item \justlarge{As an active innovator} in AI-driven solutions, drove ....
+	\end{itemize}
+		
+	\workHeader{Technologies LLC @ San Jose}{Software Engineer}{Jan 2010 - Jan 2020}
+	\begin{itemize}
+            \sloppy
+		\item \justlarge{Led} team to implement and execute ....
+		      \bulletSpace
+		\item \justlarge{Provided} mentoring and training to ....
+                \bulletSpace
+	\end{itemize}
+\end{addmargin}
+\secEndSpace
+% ------------- end experience ------------- %
+
+
+
+% ------------- projects ------------- %
+\section{\texorpdfstring{\color{blue} \textbf{Notable Projects}}{Notable Projects}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+
+		
+	% ------------- project 1 ------------- %
+	\projectHeader{xxx Project @ xxx}{}{Mon 2023 - Present}
+		
+	\noindent \justlarge{Led} a team ....
+        \spaceCollapse
+        \begin{itemize}
+            \item \textbf{Backend Technologies:} Golang, Python...
+		      \bulletSpace
+            \item \textbf{Frontend Technologies:} Angular, CSS and HTML
+		      \bulletSpace
+	\end{itemize}
+        \vspace{8pt}
+	% ------------- end project 1 ------------- %
+ 
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end projects ------------- %
+
+
+% ------------- education ------------- %
+\section{\texorpdfstring{\color{blue} \textbf{Education}}{Education}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\large\textbf{Your University of Science and Technology}\hfill \normalsize{Mon 20xx - Mon 20xx}\\
+	\setlength\parindent{1cm} B.S. in xxx, specialized in xxx
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end education ------------- %
+
+
+% ------------- skills ------------- %
+\section{\texorpdfstring{\color{blue} \textbf{Skills}}{Skills}}
+\secStartSpace
+
+\begin{addmargin}[0.5em]{1em}
+	\setstretch{1.125}
+	\noindent \textbf{Languages:} Python, JavaScript/TypeScript, Shell, Ansible, Golang \\
+	\noindent \textbf{Technology:} Docker, Kubernetes, AWS, GCP, Azure AI, Heroku, Git \\
+	\noindent \textbf{Libraries:} Django, Express.js, Angular, Bootstrap, LangChain...
+\end{addmargin}
+\secEndSpace
+\secEndSpace
+% ------------- end skills ------------- %
+
+
+% ------------- achievements ------------- %
+\section{\texorpdfstring{\color{blue} \textbf{Achievements}}{Achievements}}
+\secStartSpace
+
+\hypersetup{
+    linkcolor=HeaderColor,
+    filecolor=HeaderColor,
+    urlcolor=TextColor,
+}
+
+\begin{addmargin}[0.5em]{1em}
+        \large\textbf{Hackathon}\hfill
+    \begin{itemize}
+        \item New Feature Award (Winner): \hfill 20xx \\
+        Your project name [Python, Java]
+        \item Eng-Productivity Award (Runner-up) \hfill 20xx \\
+        Your project name [Django, Bootstrap, RedHat security data API]
+    \end{itemize}
+\end{addmargin}
+
+\begin{addmargin}[0.5em]{1em}
+	\large\textbf{Key Certificates Earned:}\hfill
+    \begin{itemize}[itemsep=-2.25pt, leftmargin=1.5em]
+        \item \href{https://learn.microsoft.com/en-us/users/Black-Myth/}{Microsoft Certified: Engineer} \hfill 
+        \item \href{https://www.coursera.org/account/accomplishments/verify/}{Cert: Supervised Machine Learning: Regression and Classification} \hfill
+    \end{itemize}
+\end{addmargin}
+
+\begin{addmargin}[0.5em]{1em}
+    \large\textbf{Published Online:} \href{https://www.vim.org/scripts/script.php}{Name}
+\end{addmargin}
+
+\begin{addmargin}[0.5em]{1em}
+    \large\textbf{Online tool built by myself:} \href{https://www.quickcompoundinterestcalculator.com/}{ Compound Interest Calculator} [Django, Bootstrap, ChartJS]
+\end{addmargin}
+
+
+% ------------- end achievements ------------- %
+
+\end{document}
