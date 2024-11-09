@@ -18,4 +18,4 @@ To edit and compile this resume template, it’s recommended to use [Overleaf](h
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/your-repo-name.git
+   git clone https://github.com/geekcoding101/resume.git
